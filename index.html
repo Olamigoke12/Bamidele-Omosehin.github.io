@@ -1,0 +1,1352 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chief Bamidele Omosehin — The Asejere Vision · Okitipupa/Irele 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+ 
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+:root {
+  --green:       #0a5c2e;
+  --green-dark:  #063d1e;
+  --green-mid:   #147a41;
+  --green-light: #1da052;
+  --gold:        #c9991a;
+  --gold-light:  #e8b84b;
+  --gold-pale:   #fdf3d7;
+  --gold-deep:   #a07410;
+  --cream:       #faf8f2;
+  --white:       #ffffff;
+  --text:        #1a1a1a;
+  --text-muted:  #555;
+  --red-nigeria: #008751;
+}
+ 
+html { scroll-behavior: smooth; }
+ 
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.85;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+ 
+/* ── TOP STRIP ── */
+.topstrip {
+  background: var(--green-dark);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.topstrip span { color: rgba(255,255,255,0.5); margin: 0 8px; }
+ 
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: var(--green-dark);
+}
+ 
+/* Hero portrait — illustrated CSS since external images may be blocked */
+.hero-portrait-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* Layered atmospheric background */
+  background:
+    radial-gradient(ellipse 55% 70% at 50% 25%, rgba(20,122,65,0.35) 0%, transparent 65%),
+    radial-gradient(ellipse 90% 60% at 50% 100%, rgba(6,61,30,0.98) 0%, rgba(6,61,30,0.6) 50%, transparent 70%),
+    linear-gradient(160deg, #041f0e 0%, #063d1e 35%, #0a5c2e 60%, #0d7a3e 100%);
+}
+ 
+/* Decorative diagonal pattern overlay */
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.06;
+  background-image:
+    repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 22px),
+    repeating-linear-gradient(-45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 22px);
+}
+ 
+/* The actual photo with graceful fallback */
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  z-index: 3;
+  filter: brightness(0.75) contrast(1.08) saturate(0.8);
+  mix-blend-mode: luminosity;
+  opacity: 0.55;
+}
+ 
+/* Illustrated silhouette fallback shown if img fails */
+.hero-silhouette {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
+  max-width: 80vw;
+  height: 75%;
+  opacity: 0.12;
+  background:
+    radial-gradient(ellipse 55% 25% at 50% 18%, rgba(232,184,75,0.9) 0%, transparent 100%),
+    radial-gradient(ellipse 40% 55% at 50% 60%, rgba(232,184,75,0.6) 0%, transparent 100%);
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+ 
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background:
+    linear-gradient(180deg,
+      rgba(6,61,30,0.7) 0%,
+      rgba(6,61,30,0.15) 30%,
+      rgba(6,61,30,0.05) 55%,
+      rgba(6,61,30,0.75) 80%,
+      rgba(6,61,30,0.97) 100%);
+}
+ 
+/* Gold arc accent */
+.hero-arc {
+  position: absolute;
+  z-index: 4;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  border-top: 1px solid rgba(201,153,26,0.25);
+  border-radius: 50% 50% 0 0;
+  pointer-events: none;
+}
+ 
+.hero-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 60px 30px 90px;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  animation: fadeUp 1.3s ease both;
+}
+ 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+.hero-eyebrow {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  border: 1px solid rgba(201,153,26,0.45);
+  padding: 7px 22px;
+  margin-bottom: 28px;
+  background: rgba(201,153,26,0.08);
+}
+ 
+.hero-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.0;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 40px rgba(0,0,0,0.5);
+  letter-spacing: -1px;
+}
+.hero-name em {
+  color: var(--gold-light);
+  font-style: normal;
+  display: block;
+  font-size: 0.88em;
+}
+ 
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.72);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  line-height: 2;
+}
+ 
+.hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto 32px;
+  max-width: 320px;
+}
+.hero-divider::before,
+.hero-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,153,26,0.6));
+}
+.hero-divider::after {
+  background: linear-gradient(90deg, rgba(201,153,26,0.6), transparent);
+}
+.hero-divider-gem {
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+ 
+.hero-tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-style: italic;
+  color: rgba(255,255,255,0.88);
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto 56px;
+  line-height: 1.55;
+}
+.hero-tagline strong { color: var(--gold-light); font-style: normal; font-weight: 700; }
+ 
+.scroll-hint {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  animation: breathe 3s ease-in-out infinite;
+}
+@keyframes breathe { 0%,100%{opacity:0.38} 50%{opacity:0.75} }
+.scroll-hint::after { content: ' ↓'; }
+ 
+/* ── GENERIC SECTION ── */
+section { padding: 96px 20px; }
+.section-inner { max-width: 800px; margin: 0 auto; }
+.section-inner.wide { max-width: 1100px; }
+ 
+.section-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+ 
+h2.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.9rem);
+  font-weight: 700;
+  color: var(--green-dark);
+  line-height: 1.18;
+  margin-bottom: 32px;
+}
+ 
+.dropcap::first-letter {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 5.5em;
+  font-weight: 900;
+  line-height: 0.72;
+  margin: 6px 16px 0 0;
+  color: var(--green);
+  padding: 4px 0 0;
+}
+ 
+p { margin-bottom: 1.4em; color: var(--text-muted); }
+p:last-child { margin-bottom: 0; }
+.intro-section p, .main-appeal p { color: #333; }
+ 
+.lead-text {
+  font-size: 1.18em;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.72;
+  border-left: 3px solid var(--gold);
+  padding-left: 22px;
+  margin-bottom: 44px;
+}
+ 
+/* ── PULLQUOTE ── */
+.pullquote {
+  border-left: 5px solid var(--gold);
+  padding: 28px 38px;
+  margin: 56px 0;
+  background: var(--gold-pale);
+  position: relative;
+}
+.pullquote::before {
+  content: '\201C';
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  color: var(--gold);
+  position: absolute;
+  top: -14px;
+  left: 18px;
+  line-height: 1;
+  opacity: 0.45;
+}
+.pullquote blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.32em;
+  font-style: italic;
+  color: var(--green-dark);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  padding-left: 22px;
+}
+.pullquote cite {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-left: 22px;
+}
+ 
+/* ── WHITE SECTION ── */
+.intro-section { background: var(--white); }
+ 
+/* ── GREEN SECTION ── */
+.green-section {
+  background: linear-gradient(150deg, #041f0e 0%, var(--green-dark) 40%, #0a5c2e 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.green-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px,
+    transparent 0, transparent 18px);
+}
+.green-section .section-label { color: var(--gold-light); }
+.green-section h2.section-title { color: var(--white); }
+.green-section p { color: rgba(255,255,255,0.84); }
+ 
+/* ── PHOTO FEATURE PANELS ── */
+.photo-feature { background: var(--green-dark); }
+.photo-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+  align-items: stretch;
+}
+ 
+/* The portrait panel — CSS illustrated background + img fallback */
+.portrait-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+}
+ 
+/* Base illustrated portrait */
+.portrait-panel-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 35%, rgba(232,184,75,0.12) 0%, transparent 65%),
+    radial-gradient(ellipse 100% 100% at 50% 0%, rgba(10,92,46,0.5) 0%, transparent 70%),
+    linear-gradient(180deg, #082d16 0%, #0a5c2e 40%, #063d1e 100%);
+}
+ 
+/* Decorative frame lines on portrait */
+.portrait-panel-bg::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(201,153,26,0.15);
+  pointer-events: none;
+  z-index: 2;
+}
+.portrait-panel-bg::after {
+  content: '';
+  position: absolute;
+  inset: 26px;
+  border: 1px solid rgba(201,153,26,0.08);
+  pointer-events: none;
+  z-index: 2;
+}
+ 
+/* The actual photo */
+.portrait-panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 3;
+  filter: brightness(0.78) contrast(1.1) saturate(0.75);
+  transition: transform 0.9s ease;
+}
+.portrait-panel img:hover { transform: scale(1.04); }
+ 
+/* Gradient overlay on top of photo */
+.portrait-panel-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background:
+    linear-gradient(180deg,
+      rgba(6,61,30,0.5) 0%,
+      rgba(6,61,30,0.05) 30%,
+      rgba(6,61,30,0.05) 65%,
+      rgba(6,61,30,0.85) 100%);
+}
+ 
+/* Monogram shown if image fails to load */
+.portrait-monogram {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.portrait-monogram-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid rgba(201,153,26,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201,153,26,0.08);
+}
+.portrait-monogram-initials {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--gold-light);
+  opacity: 0.8;
+  line-height: 1;
+}
+.portrait-monogram-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+ 
+.portrait-caption {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  padding: 0 20px;
+}
+ 
+.photo-strip-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px 56px;
+  background: var(--green-dark);
+  color: white;
+  position: relative;
+}
+.photo-strip-text::before {
+  content: '';
+  position: absolute;
+  top: 40px; bottom: 40px;
+  left: 0; width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(201,153,26,0.3), transparent);
+}
+ 
+/* ── STATS STRIP ── */
+.stats-strip {
+  background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold) 50%, var(--gold-light) 100%);
+  padding: 72px 20px;
+}
+.stats-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: var(--green-dark);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.stat-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(6,61,30,0.72);
+}
+ 
+/* ── PILLARS ── */
+.pillars-section { background: var(--cream); }
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+  margin-top: 52px;
+}
+.pillar-card {
+  background: var(--white);
+  border: 1px solid rgba(10,92,46,0.1);
+  border-top: 5px solid var(--gold);
+  padding: 38px 30px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(10,92,46,0.1);
+}
+.pillar-icon {
+  width: 52px; height: 52px;
+  background: var(--green);
+  color: var(--gold-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  margin-bottom: 22px;
+  border-radius: 4px;
+}
+.pillar-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.22rem;
+  color: var(--green-dark);
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+.pillar-card p { font-size: 0.9em; line-height: 1.72; margin: 0; }
+ 
+/* ── TIMELINE ── */
+.timeline-section { background: var(--white); }
+.timeline { margin-top: 56px; position: relative; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 25px; top: 10px; bottom: 10px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--green) 100%);
+}
+.timeline-item {
+  display: flex;
+  gap: 36px;
+  margin-bottom: 48px;
+  align-items: flex-start;
+}
+.timeline-dot {
+  flex-shrink: 0;
+  width: 52px; height: 52px;
+  background: var(--green);
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold-light);
+  font-size: 18px;
+  position: relative; z-index: 1;
+}
+.timeline-body { flex: 1; padding-top: 8px; }
+.timeline-body h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--green-dark);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.timeline-body p { font-size: 0.9em; margin: 0; line-height: 1.7; }
+ 
+/* ── ENDORSEMENT ── */
+.endorse-section { background: var(--green-dark); }
+.endorse-section .section-label { color: var(--gold-light); }
+.endorse-section h2.section-title { color: var(--white); }
+.endorse-card {
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(201,153,26,0.25);
+  border-left: 5px solid var(--gold);
+  padding: 40px 44px;
+  margin-top: 36px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1em;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.75;
+  position: relative;
+}
+.endorse-card::before {
+  content: '\201C';
+  font-size: 4.5rem;
+  color: var(--gold);
+  position: absolute;
+  top: 4px; left: 20px;
+  line-height: 1;
+  opacity: 0.35;
+}
+.endorse-source {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-top: 18px;
+  font-style: normal;
+  display: block;
+}
+ 
+/* ── MAIN APPEAL ── */
+.main-appeal { background: var(--cream); }
+ 
+/* ── CTA ── */
+.cta-section {
+  background: linear-gradient(150deg, #020e06 0%, var(--green-dark) 50%, #0a5c2e 100%);
+  text-align: center;
+  padding: 130px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-rings {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.cta-rings::before {
+  content: '';
+  position: absolute;
+  width: 700px; height: 700px;
+  border: 1px solid rgba(201,153,26,0.12);
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+.cta-rings::after {
+  content: '';
+  position: absolute;
+  width: 1050px; height: 1050px;
+  border: 1px solid rgba(201,153,26,0.06);
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+.cta-content { position: relative; z-index: 2; }
+.cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 24px;
+  line-height: 1.15;
+}
+.cta-section h2 em { color: var(--gold-light); font-style: normal; }
+.cta-section p {
+  font-size: 1.1em;
+  color: rgba(255,255,255,0.76);
+  max-width: 640px;
+  margin: 0 auto 52px;
+  line-height: 1.75;
+}
+.cta-word {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.5rem, 9vw, 6rem);
+  font-weight: 900;
+  color: var(--gold-light);
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  text-shadow: 0 0 80px rgba(232,184,75,0.25);
+}
+.cta-meaning {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.42);
+  margin-bottom: 64px;
+}
+.cta-btn {
+  display: inline-block;
+  border: 2px solid var(--gold);
+  color: var(--gold-light);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 18px 48px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: rgba(201,153,26,0.08);
+}
+.cta-btn:hover {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+ 
+/* ── COURTESY SECTION ── */
+.courtesy-section {
+  background: #020e06;
+  padding: 72px 20px;
+  border-top: 1px solid rgba(201,153,26,0.2);
+}
+ 
+.courtesy-card {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,153,26,0.2);
+  padding: 44px 52px;
+  position: relative;
+}
+.courtesy-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+}
+.courtesy-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,153,26,0.4), transparent);
+}
+ 
+.courtesy-photo-wrap {
+  flex-shrink: 0;
+  position: relative;
+}
+.courtesy-photo-ring {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  padding: 5px;
+  position: relative;
+}
+.courtesy-photo-ring::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,153,26,0.25);
+}
+.courtesy-photo-ring::after {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,153,26,0.1);
+}
+.courtesy-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: brightness(1.05) contrast(1.05);
+}
+ 
+.courtesy-text { flex: 1; }
+ 
+.courtesy-compiled-by {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.courtesy-compiled-by::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+ 
+.courtesy-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+ 
+.courtesy-slogan {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+.gok-text { color: var(--gold-light); }
+.apata-text { color: var(--white); }
+.exclaim { color: var(--gold); }
+ 
+.courtesy-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.48);
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+ 
+.courtesy-stamp {
+  text-align: center;
+  margin-top: 44px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+}
+ 
+/* ── FOOTER ── */
+footer {
+  background: #010905;
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+  padding: 36px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  line-height: 2.2;
+}
+footer strong { color: var(--gold-light); }
+ 
+/* ── ORNAMENT ── */
+.ornament {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 14px;
+  opacity: 0.6;
+  margin: 24px 0;
+}
+ 
+/* ── APC BADGE ── */
+.apc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 12px 24px;
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+.apc-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+ 
+@media (max-width: 700px) {
+  .photo-strip { grid-template-columns: 1fr; }
+  .portrait-panel { min-height: 320px; }
+  .photo-strip-text { padding: 40px 28px; }
+  .photo-strip-text::before { display: none; }
+  .courtesy-card { flex-direction: column; text-align: center; padding: 36px 28px; gap: 30px; }
+  .courtesy-compiled-by { justify-content: center; }
+  .timeline::before { left: 20px; }
+}
+</style>
+</head>
+<body>
+ 
+<!-- TOP STRIP -->
+<div class="topstrip">
+  All Progressives Congress (APC)
+  <span>·</span>
+  Okitipupa / Irele Federal Constituency
+  <span>·</span>
+  Ondo South, Nigeria
+  <span>·</span>
+  2027 Elections
+</div>
+ 
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-portrait-bg"></div>
+  <div class="hero-pattern"></div>
+ 
+  <!-- Illustrated silhouette (always visible as atmosphere) -->
+  <div class="hero-silhouette"></div>
+ 
+  <!-- The actual Omosehin photo — browser loads this; graceful if blocked -->
+  <img class="hero-img"
+    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmXeGKf_JTVD8eG6L9NH48oLBD7c6KJTAiKZ0GN1O0IzTU7tdO5ckaYJ7QZ53GEOc6gcPGbPf3_vWs7XQfAUU9XiOd-fUk8ogCm3BljgvFHTtqYCEzydKMKfNR4u_OJJuAwouKWZfP-TJEtNaNrd9RUngoxL3sYwgmBfY66GAXbRwKMMVPcp036ZLayV-7/w640-h640/WhatsApp%20Image%202026-03-25%20at%2013.38.00%20(1).jpeg"
+    alt="High Chief Bamidele Omosehin, Lisa of Osooro Kingdom"
+    onerror="this.style.display='none'"
+  >
+ 
+  <div class="hero-vignette"></div>
+  <div class="hero-arc"></div>
+ 
+  <div class="hero-content">
+    <div class="hero-eyebrow">The Asejere Movement · Ondo South · 2027</div>
+    <h1 class="hero-name">
+      High Chief<br>
+      <em>Bamidele Omosehin</em>
+    </h1>
+    <p class="hero-title">
+      Lisa of Osooro Kingdom &nbsp;·&nbsp; Philanthropist &nbsp;·&nbsp; Convener, Asejere Progressive Movement<br>
+      APC Candidate · Federal House of Representatives · Okitipupa / Irele Constituency
+    </p>
+    <div class="hero-divider">
+      <div class="hero-divider-gem"></div>
+    </div>
+    <p class="hero-tagline">
+      <strong>"Politics is secondary. Service is primary."</strong><br>
+      A man who served long before he asked for your vote.
+    </p>
+    <p class="scroll-hint">Scroll to read his story</p>
+  </div>
+</section>
+ 
+<!-- ═══ OPENING STATEMENT ═══ -->
+<section class="intro-section">
+  <div class="section-inner">
+    <div class="section-label">A Call to Our Better Angels</div>
+    <h2 class="section-title">There Are Moments in History When a People Must Rise — This Is That Moment for Okitipupa and Irele.</h2>
+ 
+    <p class="lead-text">
+      A message of hope, conviction, and purpose — rallying the good people of Okitipupa and Irele Federal Constituency around a leader who has already proved, with his own hands and his own resources, that service is not just a campaign promise. It is a way of life.
+    </p>
+ 
+    <div class="ornament">· · ·</div>
+ 
+    <p class="dropcap">
+      Let me tell you something about what it means to believe in a place. Not just to be born there, not just to bear its name — but to invest in it. To pour your time, your treasure, your energy into the soil of a community and say: <em>I trust that something beautiful can grow here.</em> That is not the act of a politician. That is the act of a leader.
+    </p>
+    <p>
+      And that is exactly what <strong>High Chief Bamidele Omosehin</strong> — the Lisa of Osooro Kingdom, convener of the Asejere Progressive Movement, and APC's beacon of hope for Okitipupa/Irele Federal Constituency — has done, not once, not twice, but again and again, quietly, consistently, without waiting for a political title to justify his love for his people.
+    </p>
+    <p>
+      Years before any ballot was cast. Years before any declaration was made. This man was already in the trenches — distributing food to widows and the elderly, paying school fees for children who would otherwise be left behind, handing over working tools to young men and women who just needed one fair chance to change the story of their lives. He was not running for anything. He was simply running toward his people. And that, my friends, is the truest definition of leadership.
+    </p>
+ 
+    <div class="pullquote">
+      <blockquote>
+        My intention to represent the people of Okitipupa/Irele Federal Constituency in the House of Representatives is not a departure from service, but an extension of it. Politics is secondary; service is primary.
+      </blockquote>
+      <cite>— High Chief Bamidele Omosehin</cite>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══ STATS ═══ -->
+<div class="stats-strip">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-num">2,000+</div>
+      <div class="stat-label">Residents Empowered Annually</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">6th</div>
+      <div class="stat-label">BOF Unity Cup Edition Hosted</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2</div>
+      <div class="stat-label">Foundations Built for the People</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">1</div>
+      <div class="stat-label">Unwavering Vision: Asejere</div>
+    </div>
+  </div>
+</div>
+ 
+<!-- ═══ WHO HE IS ═══ -->
+<section class="green-section">
+  <div class="section-inner">
+    <div class="section-label">The Man Behind the Movement</div>
+    <h2 class="section-title">He Did Not Wait for Power to Begin Serving. He Served First. Now Power Must Follow Purpose.</h2>
+    <p>
+      Born in Iju-Odo in the heart of Okitipupa Local Government Area of Ondo State, Bamidele Omosehin carries the DNA of his community in every decision he makes. He is the Traditional Prime Minister — the Lisa — of the ancient and venerable Osooro Kingdom, a title that speaks not of self-aggrandisement, but of duty. A title that demands humility before authority. A title that says: <em>I exist to lift my people.</em>
+    </p>
+    <p>
+      As a businessman and entrepreneur who built his fortune through diligence and vision, he could have chosen the comfortable life — far from the dusty roads of Okitipupa, far from the challenges of Irele. But he chose otherwise. He chose to come home. He chose to invest in the people who shaped him. And in doing so, he became not just a philanthropist — he became a movement.
+    </p>
+    <p>
+      Through the <strong>Bamidele Omosehin Foundation (BOF)</strong> and the <strong>Dele Omosehin Development Initiative (DODI)</strong>, he has funded scholarships, supported widows, backed community health outreaches, hosted youth empowerment programmes, partnered with skill-acquisition initiatives for women, and organized sports competitions that give young people in Ikale land a reason to dream bigger. None of this was done for votes. It was done because he believed it was right.
+    </p>
+    <div class="apc-badge">
+      <div class="apc-dot"></div>
+      All Progressives Congress — Okitipupa / Irele Federal Constituency
+      <div class="apc-dot"></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══ PHOTO PANEL 1 ═══ -->
+<div class="photo-feature">
+  <div class="photo-strip">
+ 
+    <div class="portrait-panel">
+      <div class="portrait-panel-bg"></div>
+      <div class="portrait-monogram">
+        <div class="portrait-monogram-circle">
+          <span class="portrait-monogram-initials">DO</span>
+        </div>
+        <span class="portrait-monogram-label">High Chief Dele Omosehin</span>
+      </div>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmXeGKf_JTVD8eG6L9NH48oLBD7c6KJTAiKZ0GN1O0IzTU7tdO5ckaYJ7QZ53GEOc6gcPGbPf3_vWs7XQfAUU9XiOd-fUk8ogCm3BljgvFHTtqYCEzydKMKfNR4u_OJJuAwouKWZfP-TJEtNaNrd9RUngoxL3sYwgmBfY66GAXbRwKMMVPcp036ZLayV-7/w640-h640/WhatsApp%20Image%202026-03-25%20at%2013.38.00%20(1).jpeg"
+        alt="Chief Omosehin — APC Convention March 2026"
+        onerror="this.style.display='none'"
+      >
+      <div class="portrait-panel-overlay"></div>
+      <div class="portrait-caption">Party Unity &amp; Leadership · APC Convention 2026</div>
+    </div>
+ 
+    <div class="photo-strip-text">
+      <div class="section-label" style="color:var(--gold-light);">His Declaration</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2.1rem);color:white;font-weight:700;line-height:1.3;margin-bottom:26px;">
+        "The Asejere Movement Is Not Just a Campaign Mantra — It Is a Covenant With the People."
+      </h2>
+      <p style="color:rgba(255,255,255,0.78);font-size:0.93em;line-height:1.85;margin-bottom:22px;">
+        When Chief Omosehin officially declared his candidacy during a historic two-day working tour across Okitipupa and Irele — welcomed in every town by APC leaders, traditional rulers, and thousands of ordinary citizens — he did not speak the language of ambition. He spoke the language of obligation.
+      </p>
+      <p style="color:rgba(255,255,255,0.78);font-size:0.93em;line-height:1.85;">
+        "I have listened carefully to the voices of our leaders, elders, and the people. With deep humility and a renewed sense of responsibility, I accept the call to serve. I intend to restore dignity, unity, and development in Ondo South." The Asejere Movement was born — a covenant, not a campaign.
+      </p>
+    </div>
+ 
+  </div>
+</div>
+ 
+<!-- ═══ PHOTO PANEL 2 (reversed) ═══ -->
+<div class="photo-feature">
+  <div class="photo-strip">
+ 
+    <div class="photo-strip-text" style="background:#041f0e;">
+      <div class="section-label" style="color:var(--gold-light);">Party Commitment</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2.1rem);color:white;font-weight:700;line-height:1.3;margin-bottom:26px;">
+        A Stakeholder Who Thinks Beyond Himself — For Party, People, and Nation
+      </h2>
+      <p style="color:rgba(255,255,255,0.78);font-size:0.93em;line-height:1.85;margin-bottom:22px;">
+        At the APC National Convention in March 2026, Chief Omosehin demonstrated loyalty not just to his own ambition, but to the ideals of a united, progressive party — publicly endorsing tested leaders for party stability and calling on delegates to place Nigeria's future above personal interests.
+      </p>
+      <p style="color:rgba(255,255,255,0.78);font-size:0.93em;line-height:1.85;">
+        This is not a man who merely seeks power. This is a man who understands what power is <em>for</em>. And that understanding — rare as it is — is exactly what Okitipupa and Irele deserve in Abuja.
+      </p>
+    </div>
+ 
+    <div class="portrait-panel">
+      <div class="portrait-panel-bg"></div>
+      <div class="portrait-monogram">
+        <div class="portrait-monogram-circle">
+          <span class="portrait-monogram-initials">DO</span>
+        </div>
+        <span class="portrait-monogram-label">Asejere Progressive Movement</span>
+      </div>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh28A4kEwU6f4u4Nprf8x6bweCaanU3KblcZLVFCuATv-KIfmLip1GF3du5E56hEmgkjZuTBdueYBsv1Qgh8rtbe2FWtCzM07j57VX3Fx4xJecu9rvSMV5PM0zFOqpyXCwdEsK0SL4n8yJa8N0v5sM9Vvi1yH5n72RZLoxFW_Y3dExbN8Shy2HBfM7vKLbe/s1080/WhatsApp%20Image%202026-03-25%20at%2013.38.00.jpeg"
+        alt="Chief Omosehin — Asejere Movement"
+        onerror="this.style.display='none'"
+      >
+      <div class="portrait-panel-overlay"></div>
+      <div class="portrait-caption">Asejere — Peace · Prosperity · People</div>
+    </div>
+ 
+  </div>
+</div>
+ 
+<!-- ═══ PILLARS ═══ -->
+<section class="pillars-section">
+  <div class="section-inner wide">
+    <div class="section-label">The Asejere Blueprint</div>
+    <h2 class="section-title">Four Pillars of Transformation for Okitipupa and Irele</h2>
+    <p style="max-width:700px;color:var(--text-muted);">Asejere is not a slogan. It is a structured vision built on four unshakeable foundations, each already proven through Chief Omosehin's years of service before seeking any office.</p>
+ 
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">🎓</div>
+        <h3>Education &amp; Youth Empowerment</h3>
+        <p>From scholarships to vocational training, Chief Omosehin has invested in the minds and hands of the next generation. His Foundation has covered fees for students who would have dropped out, and equipped young people with skills to build thriving businesses. In Abuja, he will advocate for federal allocations that reach every school in Okitipupa and Irele.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">👩‍👧</div>
+        <h3>Women &amp; Community Development</h3>
+        <p>He has described women as "the soul of strong communities." Through partnerships like the Bimbeads Concepts jewelry-making programme, he has opened doors of economic independence for women and girls. He believes: <em>No constituency truly develops until its women are empowered.</em></p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">⚽</div>
+        <h3>Sports, Culture &amp; Youth Engagement</h3>
+        <p>Six editions of the BOF Unity Cup have brought communities together, discovered talents, and given restless youth a productive outlet. Sport is nation-building. In Abuja, Chief Omosehin will push for federal sports infrastructure investment in Ondo South and youth talent development programmes.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🏗️</div>
+        <h3>Infrastructure &amp; Healthcare Access</h3>
+        <p>The road from Ore to Igbokoda. A Federal Medical Centre for Okitipupa. Bitumen exploration that can power an economic renaissance. These are not dreams — they are blueprints waiting for a voice in Abuja who knows this land and loves its people. Chief Omosehin will be that voice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══ TIMELINE ═══ -->
+<section class="timeline-section">
+  <div class="section-inner">
+    <div class="section-label">A Track Record of Service</div>
+    <h2 class="section-title">He Has Been Serving Long Before He Was Asking for Your Vote</h2>
+    <p style="color:var(--text-muted);max-width:640px;">This is not a man who discovered his people during election season. Every milestone below happened before any ballot, before any campaign podium.</p>
+ 
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot">🏛️</div>
+        <div class="timeline-body">
+          <h4>Founding of Bamidele Omosehin Foundation (BOF)</h4>
+          <p>Established to provide educational support, social welfare, and community development to the indigent residents of Okitipupa, Irele, and beyond — funded entirely from his own resources, without any political office or government support.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">🎁</div>
+        <div class="timeline-body">
+          <h4>Annual Empowerment — Over 2,000 Beneficiaries Per Year</h4>
+          <p>Every year, Chief Omosehin distributes food items, cash gifts, and working tools to widows, the elderly, youth, and vulnerable groups across Ikale land. In December 2025 alone, over 1,000 underprivileged residents received support — all funded personally.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">⚽</div>
+        <div class="timeline-body">
+          <h4>BOF Unity Cup — 6 Editions of Peace and Talent Discovery</h4>
+          <p>The annual football competition has become a beloved institution in Okitipupa, uniting communities, discovering sporting talent, and providing youth with a platform for positive expression. Royal fathers, LGA chairmen, and APC executives attend in solidarity every year.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">👩‍💼</div>
+        <div class="timeline-body">
+          <h4>Women's Skills Acquisition — Bimbeads Partnership</h4>
+          <p>In partnership with Bimbeads Concepts, Chief Omosehin launched a programme training women and girls across Okitipupa and Irele in jewelry-making, mentorship, and market access — giving them sustainable livelihoods without charity dependency.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">👑</div>
+        <div class="timeline-body">
+          <h4>Official Declaration — The Asejere Movement Unveiled</h4>
+          <p>After extensive consultations with party leaders, traditional rulers, women groups, youth leaders, and community stakeholders across Okitipupa and Irele, HRH Dele Omosehin officially declared his candidacy and launched the Asejere Movement — peace, prosperity, and people-centered leadership.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot">🤝</div>
+        <div class="timeline-body">
+          <h4>COYCO &amp; Multiple Endorsements — Grassroots Groundswell</h4>
+          <p>The Coalition of Youth and Community Organizations (COYCO) unanimously endorsed Chief Omosehin, pledging to mobilize support across all six LGAs of Ondo South. Their message: "Imagine what he could achieve with a bigger platform to serve."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══ ENDORSEMENTS ═══ -->
+<section class="endorse-section">
+  <div class="section-inner">
+    <div class="section-label">What the People Say</div>
+    <h2 class="section-title">When Truth Speaks, It Does Not Whisper</h2>
+ 
+    <div class="endorse-card">
+      High Chief Bamidele Omosehin has consistently shown that he is ready to serve the people. This is why COYCO proudly endorses him and will mobilize massive support to ensure that Ondo South gets the representation it truly deserves. Patriotism is not just about waving a flag — it is about selfless service, about lifting others, about putting the collective good above individual gain.
+      <cite class="endorse-source">— Comrade Olafeso Oladipupo, Convener &amp; Executive Director, COYCO</cite>
+    </div>
+ 
+    <div class="endorse-card">
+      Omosehin has been using sports and empowerment initiatives to foster unity and address socio-economic challenges at the grassroots. He is a man of the people — a leader who shows up before the cameras, and long after the cameras have gone.
+      <cite class="endorse-source">— HRM Oba Gbadebo Bajowa, Rebuja of Osooro Kingdom</cite>
+    </div>
+ 
+    <div class="endorse-card">
+      The problems of our society require political will, policy intervention, and leadership that prioritizes the people above self. That is why I am in politics. My aspiration is simple: to see a constituency, a state, and a nation where every Nigerian has the opportunity to thrive.
+      <cite class="endorse-source">— High Chief Bamidele Omosehin, in his own words</cite>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══ MAIN APPEAL ═══ -->
+<section class="main-appeal">
+  <div class="section-inner">
+    <div class="section-label">The Case for Omosehin</div>
+    <h2 class="section-title">We Do Not Need Another Politician. We Need a Statesman.</h2>
+    <p>
+      Here is the truth that every citizen of Okitipupa and Irele must reckon with: Nigeria has no shortage of politicians. What it lacks — what our constituency has hungered for, generation after generation — is a leader who serves before seeking. A leader whose record of impact precedes any campaign slogan. A leader whose love for his people is written not in speeches, but in scholarships paid, in bellies fed, in women empowered, in youth engaged, in communities rebuilt.
+    </p>
+    <p>
+      Chief Bamidele Omosehin is that leader.
+    </p>
+    <p>
+      He understands that the role of a representative is not merely to travel to Abuja and collect sitting allowances. It is to carry the voice of every farmer in Irele, every widow in Okitipupa, every young graduate who cannot find work, every mother whose child sits under a leaking classroom roof — to carry those voices into the chamber of power and refuse to sit down until those voices are heard.
+    </p>
+ 
+    <div class="pullquote">
+      <blockquote>
+        The Asejere Movement is not just a campaign mantra but a commitment to a new era of inclusive representation and results-driven leadership.
+      </blockquote>
+      <cite>— High Chief Bamidele Omosehin, Declaration Tour, Okitipupa, 2025</cite>
+    </div>
+ 
+    <p>
+      Think about what he could achieve — this man who has already done so much with only his own resources — imagine what he will do with the full weight of federal representation behind him. Imagine constituency projects channeled to the roads that our mothers limp along. Imagine federal legislation that finally unlocks Ondo South's vast bitumen deposits for the benefit of <em>our</em> communities. Imagine a Federal Medical Centre that means no more mothers dying in transit on bad roads trying to reach help.
+    </p>
+    <p>
+      This is not a dream. This is Asejere. And it is already on the way.
+    </p>
+    <p>
+      But it needs <em>you.</em>
+    </p>
+    <p>
+      Democracy is not a spectator sport. It is a collective act of will. When the people of Okitipupa and Irele rise together — when they carry their PVCs like the powerful instruments of change they truly are, when they cast their votes not out of sentiment but out of clear-eyed recognition that this man has earned their trust through years of unasked service — then history will record that something remarkable happened in Ondo South in 2027.
+    </p>
+    <p>
+      That a people decided they were done being disappointed. That they chose a servant over a seeker. That they chose <strong>Asejere.</strong>
+    </p>
+  </div>
+</section>
+ 
+<!-- ═══ CALL TO ACTION ═══ -->
+<section class="cta-section">
+  <div class="cta-rings"></div>
+  <div class="cta-content">
+    <div class="section-label" style="color:var(--gold-light);justify-content:center;margin-bottom:32px;">Your Vote. Your Voice. Your Future.</div>
+    <h2>Now Is the Time.<br><em>Okitipupa. Irele. Rise.</em></h2>
+    <p>
+      They say change comes slowly. But sometimes — when the right leader meets the right moment and the right people — change comes all at once. This is your moment. High Chief Bamidele Omosehin is your leader. The Asejere Movement is your vehicle. All that remains is your decision.
+    </p>
+ 
+    <span class="cta-word">Asejere</span>
+    <span class="cta-meaning">Peace · Prosperity · People-Centered Leadership</span>
+ 
+    <a class="cta-btn" href="#">
+      Rally Round Chief Omosehin · Vote APC 2027
+    </a>
+  </div>
+</section>
+ 
+<!-- ═══ COURTESY RECOGNITION ═══ -->
+<section class="courtesy-section">
+  <div class="courtesy-card">
+    <div class="courtesy-photo-wrap">
+      <div class="courtesy-photo-ring">
+        <img
+          class="courtesy-photo"
+          src="data:image/jpeg;base64,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"
+          alt="Olamigoke Akinrogunde — GOK"
+        >
+      </div>
+    </div>
+    <div class="courtesy-text">
+      <div class="courtesy-compiled-by">Compiled with conviction by</div>
+      <div class="courtesy-name">Olamigoke Akinrogunde</div>
+      <div class="courtesy-slogan">
+        <span class="gok-text">GOK!</span>
+        &nbsp;
+        <span class="apata-text">APATA NLA</span><span class="exclaim">!!!</span>
+      </div>
+      <div class="courtesy-role">
+        In proud support of the Asejere Progressive Movement<br>
+        &amp; the candidacy of High Chief Bamidele Omosehin<br>
+        APC · Okitipupa / Irele Federal Constituency · Ondo South · 2027
+      </div>
+    </div>
+  </div>
+  <div class="courtesy-stamp">
+    Asejere · Peace · Prosperity · People-Centered Leadership · Ondo South 2027
+  </div>
+</section>
+ 
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <strong>High Chief Bamidele Omosehin</strong> &nbsp;·&nbsp; Lisa of Osooro Kingdom<br>
+  Convener, Asejere Progressive Movement &nbsp;·&nbsp; APC Chieftain<br>
+  Federal House of Representatives Aspirant — Okitipupa / Irele Federal Constituency, Ondo South<br><br>
+  <strong >
+    "My aspiration is simple: to see a constituency, a state, and a nation where every Nigerian has the opportunity to thrive." — H.C. Bamidele Omosehin
+  </strong>
+</footer>
+ 
